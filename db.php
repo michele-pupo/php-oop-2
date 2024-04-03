@@ -16,7 +16,7 @@ $product1 = new Product (36, 'Pettine', 9.99, 'Pettine fitto per pelo corto', 'h
 // var_dump($product1);
 
 //istazio classe Cibo
-$cibo_labrador = new Food (23, 'Natural Trainer Maxi Adult', 43.99, 'Crocchette per cani adulti di taglia grande', 'https://shop-cdn-m.mediazs.com/bilder/3/400/73477_pla_nova_foods_trainer_natural_maxi_beef_rice_und_ginseng_12kg_hs_01_3.jpg', $cani, '12', '10/12/2025', 'Manzo');
+$cibo_labrador = new Food (23, 'Natural Trainer Maxi Adult', 43.99, 'Crocchette per cani adulti di taglia grande', 'https://shop-cdn-m.mediazs.com/bilder/3/400/73477_pla_nova_foods_trainer_natural_maxi_beef_rice_und_ginseng_12kg_hs_01_3.jpg', $cani, 'Manzo', 12, '10/12/2025');
 
 // var_dump($cibo_labrador);
 

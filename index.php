@@ -29,8 +29,8 @@ require 'db.php';
                     <div class="product-body">
                         <h5 class="product-name"><?= $product->name ?></h5>
                         <span class="product-price"><?= $product->price ?> €</span>
-                        <h6></h6>
                         <p class="product-description"><?= $product->description ?></p>
+                        <h6 class="product-weight"><?= $product->weight . 'KG' ?></h6>
                         <ul class="product-category">
                             <?php 
                             foreach($product->categories as $category){
