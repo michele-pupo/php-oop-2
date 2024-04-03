@@ -1,3 +1,9 @@
+<?php
+
+require 'db.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="it-IT">
 <head>
