@@ -38,4 +38,4 @@ $productArray = [
     $cuccia_labrador
 ];
 
-var_dump($productArray);
+// var_dump($productArray);

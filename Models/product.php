@@ -35,4 +35,8 @@ class Product{
     function getClassName(){
         return get_class();
     }
+
+    public function getCategories(){
+        return $this->categories;
+    }
 }
