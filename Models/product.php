@@ -3,13 +3,13 @@
 // definiamo la classe Product
 class Product{
     // dichiariamo le variabili di istanza
-    private $id;
-    private $name;
-    private $price;
-    private $description;
-    private $img;
-    private $discount;
-    private $category;
+    public $id;
+    public $name;
+    public $price;
+    public $description;
+    public $img;
+    public $discount;
+    public $categories;
     
 
     // funzione costruttore dei prodotti
@@ -21,14 +21,14 @@ class Product{
      * @param  string $price
      * @param  string $description
      * @param  string $img
-     * @param  array $category
+     * @param  array $categories
      */
-    function __construct($_id, $_name, $_price, $_description, $_img, Category $_category){
+    function __construct($_id, $_name, $_price, $_description, $_img, Category $_categories){
         $this->id = $_id;
         $this->name = $_name;
         $this->price = $_price;
         $this->description = $_description;
         $this->img = $_img;
-        $this->category = $_category;
+        $this->categories = $_categories;
     }
 }

@@ -17,10 +17,10 @@ class Game extends Product{
      * @param  string $_size
      * @param  string $_material
      */
-    public function __construct($_id, $_name, $_price, $_description, $_img, Category $_category , $_size, $_material){
+    public function __construct($_id, $_name, $_price, $_description, $_img, Category $_categories, $_size, $_material){
         
         // usa il costruttore del genitore
-        parent::__construct($_id, $_name, $_price, $_description, $_img, $_category);
+        parent::__construct($_id, $_name, $_price, $_description, $_img, $_categories);
 
         $this->size = $_size;
         $this->material = $_material;
