@@ -31,4 +31,8 @@ class Product{
         $this->img = $_img;
         $this->categories = $_categories;
     }
+
+    function getClassName(){
+        return get_class();
+    }
 }

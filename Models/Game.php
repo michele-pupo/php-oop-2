@@ -13,7 +13,7 @@ class Game extends Product{
      * @param  string $_price
      * @param  string $_description
      * @param  string $_img
-     * @param  array $_category
+     * @param  object $_categories
      * @param  string $_size
      * @param  string $_material
      */
@@ -24,5 +24,9 @@ class Game extends Product{
 
         $this->size = $_size;
         $this->material = $_material;
+    }
+
+    function getClassName(){
+        return get_class();
     }
 }

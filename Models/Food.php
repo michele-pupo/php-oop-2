@@ -14,7 +14,7 @@ class Food extends Product{
      * @param  string $_price
      * @param  string $_description
      * @param  string $_img
-     * @param  array $_category
+     * @param  object $_categories
      * @param  string $_ingredients
      * @param  int $_weight
      * @param  string $_expiration
@@ -27,5 +27,9 @@ class Food extends Product{
         $this->ingredients = $_ingredients;
         $this->weight = $_weight;
         $this->expiration = $_expiration;
+    }
+
+    function getClassName(){
+        return get_class();
     }
 }

@@ -18,27 +18,41 @@ require 'db.php';
     <div class="container">
         <h1 class="text-center display-1 fw-bold">E-commerce animali</h1>
     </div>
-    <div class="row row-cols-4">
+    <div class="container">
+    <div class="row ">
 
         <?php 
         foreach($productArray as $product){
             ?>
-            <div class="col d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= $product->img ?>" class="product-img-top" alt="...">
+            <div class="col-3  justify-content-center">
+                <div class="card" style="width: 100%;">
+                    <img src="<?= $product->img ?>" class="product-img-top" alt=<?= $product->name ?>>
                     <div class="product-body">
-                        <h5 class="product-name"><?= $product->name ?></h5>
+                        <h2 class="product-name"><?= $product->name ?></h2>
                         <span class="product-price"><?= $product->price ?> €</span>
                         <p class="product-description"><?= $product->description ?></p>
-                        <h6 class="product-weight"><?= $product->weight . 'KG' ?></h6>
-                        <ul class="product-category">
-                            <?php 
-                            foreach($product->categories as $category){
-                                echo "<li>$category</li>";
-                            }
+                        <?php
+                        if($product->getClassName()=="Food"){
                             ?>
-                        </ul>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h3 class="product-weight"><?= $product->weight . 'KG' ?></h3>
+                            <h4 class="product-ingredients"><?= $product->ingredients ?></h4>
+                            <h5 class="product-expiration"><?= $product->expiration ?></h5>
+                            <?php
+                        } else if($product->getClassName()=="Kennel" || $product->getClassName()== "Game"){
+                            ?>
+                            <h4 class="product-size"><?= $product->size ?></h4>
+                            <h5 class="product-material"><?= $product->material ?></h5>
+                            <?php
+                        }
+                        ?>
+                        <div class="product-category">
+                                <?php 
+                                foreach($product->categories as $category){
+                                    echo "<li>$category</li>";
+                                }
+                                ?>
+                            <a href="#" class="btn btn-primary">Acquista</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,7 +62,7 @@ require 'db.php';
         }
         ?>
     </div>
-    
+    </div>
                 
     <!-- script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
