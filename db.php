@@ -5,6 +5,8 @@ require './Models/Category.php';
 require './Models/Food.php';
 require './Models/Kennel.php';
 require './Models/Game.php';
+require './Models/User.php';
+require './Models/RegisteredUser.php';
 
 //istanzio classe Category
 $cani = new Category ('cani', '<i class="fa-solid fa-dog ms-2"></i>');
@@ -39,3 +41,9 @@ $productArray = [
 ];
 
 // var_dump($productArray);
+
+$user = new User ('marioRossi', 'mariorossi@gmail.com');
+$registeredUser = new RegisteredUser('ginoBuonvino', 'ginobuonvino@hotmail.it', '20%');
+
+var_dump($user);
+var_dump($registeredUser);
