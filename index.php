@@ -13,6 +13,9 @@ require 'db.php';
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body style="background-color: #337357">
     <div class="container">
@@ -29,7 +32,8 @@ require 'db.php';
                         <div class="card p-2" style="width: 100%; height: 700px; background-color: #96E9C6">
                             <img src="<?= $product->img ?>" alt=<?= $product->name ?>>
                             <div class="product-body">
-                                <h2 class="product-name text-center"><?= $product->name ?></h2>
+                            <span class="product-category fs-3 d-flex justify-content-center py-3"><i class="fa-solid <?= $product->category->icon ?>"></i></span>
+                                <h2 class="product-name d-flex justify-content-between text-center"><?= $product->name ?></h2>
                                 <span class="product-price text-danger fw-bold"><?= $product->price ?> €</span>
                                 <p class="product-description"><?= $product->description ?></p>
                                 <?php

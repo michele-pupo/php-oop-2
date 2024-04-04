@@ -2,8 +2,8 @@
 
 //classe Category estende la classe Product implementando alcune proprietà
 class Category {
-    private $nameCategory;
-    private $icon;
+    public $nameCategory;
+    public $icon;
 
     // funzione costruttore delle categorie    
     /**

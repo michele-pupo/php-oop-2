@@ -9,8 +9,8 @@ require './Models/User.php';
 require './Models/RegisteredUser.php';
 
 //istanzio classe Category
-$cani = new Category ('cani', '<i class="fa-solid fa-dog ms-2"></i>');
-$gatti = new Category ('gatti', '<i class="fa-solid fa-cat ms-2"></i>');
+$cani = new Category ("cani", "fa-dog");
+$gatti = new Category ("gatti", "fa-cat");
 
 //istanzio classe Product
 $product1 = new Product (36, 'Pettine', 9.99, 'Pettine fitto per pelo corto', 'https://shop-cdn-m.mediazs.com/bilder/5/400/252336_pla_kooa_kamm_aus_bambus_mit_rotierenden_z_hnen_1_5.jpg', $cani);
@@ -28,7 +28,7 @@ $tiragraffi = new Game (78, "Graffiatoio Simon's Cat", 10.49, "Simpatico graffia
 // var_dump($tiragraffi);
 
 //istanzio classe Cuccia
-$cuccia_labrador = new Kennel (99, "Gabbia per cani Trixie Friends on Tour Home", 51.99, 'Gabbia per cani Trixie Friends on Tour Home in metallo zincato, pieghevole, con vaschetta in plastica sul fondo', 'https://shop-cdn-m.mediazs.com/bilder/5/400/10777_pla_trixie_friends_on_tour_home_kennel_b_48_x_t_64_x_h_54_cm_hs_01_5.jpg', $cani, 'L 64 x P 48 x H 54 cm', 'metallo zincato');
+$cuccia_labrador = new Kennel (99, "Gabbia per cani Trixie Friends on Tour Home", 51.99, 'Gabbia per cani Trixie Friends on Tour Home in metallo zincato, pieghevole, con vaschetta in plastica sul fondo', 'https://shop-cdn-m.mediazs.com/bilder/5/400/10777_pla_trixie_friends_on_tour_home_kennel_b_48_x_t_64_x_h_54_cm_hs_01_5.jpg', $cani, 'L 64 x P 48 x H 54 cm', 'Metallo zincato');
 
 // var_dump($cuccia_labrador);
 

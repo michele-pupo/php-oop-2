@@ -8,8 +8,7 @@ class Product{
     public $price;
     public $description;
     public $img;
-    public $discount;
-    public $categories;
+    public $category;
     
 
     // funzione costruttore dei prodotti
@@ -21,22 +20,18 @@ class Product{
      * @param  string $price
      * @param  string $description
      * @param  string $img
-     * @param  array $categories
+     * @param  array $category
      */
-    function __construct($_id, $_name, $_price, $_description, $_img, Category $_categories){
+    function __construct($_id, $_name, $_price, $_description, $_img, Category $_category){
         $this->id = $_id;
         $this->name = $_name;
         $this->price = $_price;
         $this->description = $_description;
         $this->img = $_img;
-        $this->categories = $_categories;
+        $this->category = $_category;
     }
 
     function getClassName(){
         return get_class();
-    }
-
-    public function getCategories(){
-        return $this->categories;
     }
 }
