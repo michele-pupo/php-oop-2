@@ -29,20 +29,20 @@ require 'db.php';
                 ?>
                 <div class="col-3 justify-content-center">
                     <div class="d-flex flex-column justify-content-between">
-                        <div class="card p-2" style="width: 100%; height: 700px; background-color: #96E9C6">
+                        <div class="card p-2" style="width: 100%; height: 750px; background-color: #96E9C6">
                             <img src="<?= $product->img ?>" alt=<?= $product->name ?>>
                             <div class="product-body">
                             <span class="product-category fs-3 d-flex justify-content-center py-3"><i class="fa-solid <?= $product->category->icon ?>"></i></span>
-                                <h2 class="product-name d-flex justify-content-between text-center"><?= $product->name ?></h2>
-                                <span class="product-price text-danger fw-bold"><?= $product->price ?> €</span>
-                                <p class="product-description"><?= $product->description ?></p>
+                                <h2 class="product-name d-flex justify-content-center text-center"><?= $product->name ?></h2>
+                                <span class="product-price text-danger fw-bold d-flex justify-content-center"><strong class="text-black">Prezzo: </strong> <?= $product->price ?> €</span>
+                                <p class="product-description text-center pt-3"><?= $product->description ?></p>
                                 <?php
                                 if($product->getClassName()=="Food"){
                                     ?>
                                     <div class="text-center">
                                         <h3 class="product-weight"><?= $product->weight . 'KG' ?></h3>
                                         <h4 class="product-ingredients fs-5"><?= $product->ingredients ?></h4>
-                                        <h5 class="product-expiration fs-5"><?= $product->expiration ?></h5>
+                                        <h5 class="product-expiration fs-5"><span class="fw-bold">scadenza:</span><?= $product->expiration ?></h5>
                                     </div>
                                     <?php
                                 } else if($product->getClassName()=="Kennel" || $product->getClassName()== "Game"){
@@ -55,13 +55,13 @@ require 'db.php';
                                 }
                                 ?>
                             </div>
+                            <div class="d-flex justify-content-center pt-4">
+                                <a href="#" class="btn btn-primary">Acquista</a>
+                            </div> 
                         </div>
-                        <div class="d-flex justify-content-center pt-4">
-                            <a href="#" class="btn btn-primary">Acquista</a>
-                        </div> 
                     </div>           
                 </div>
-                <?php
+            <?php
             }
             ?>
         </div>

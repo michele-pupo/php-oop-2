@@ -61,5 +61,5 @@ $productArray = [
 $user = new User ('marioRossi', 'mariorossi@gmail.com');
 $registeredUser = new RegisteredUser('ginoBuonvino', 'ginobuonvino@hotmail.it', '20%');
 
-var_dump($user);
-var_dump($registeredUser);
+// var_dump($user);
+// var_dump($registeredUser);
