@@ -1,9 +1,12 @@
 <?php
 
+require_once __DIR__ . '/Traits/Sizeable.php';
+require_once __DIR__ . '/Traits/HasMaterials.php';  
 // inclusione della classe Kennel all'interno della classe Product
 class Kennel extends Product{
-    public $size;
-    public $material;
+    // uso il tratto dimensionabile
+    use Sizeable;
+    use HasMaterial;
     
     /**
      * __construct
